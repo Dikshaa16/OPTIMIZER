@@ -9,6 +9,9 @@ venv/
 ENV/
 env/
 
+# Vercel
+.vercel
+
 # IDEs
 .vscode/
 .idea/
