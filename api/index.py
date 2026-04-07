@@ -75,6 +75,16 @@ def _resolve_2d(data):
 
 
 # API Routes
+@app.route('/')
+def index():
+    return jsonify({"status": "ok", "message": "OPTIMIZER API is running"})
+
+
+@app.route('/api')
+def api_index():
+    return jsonify({"status": "ok", "message": "OPTIMIZER API is running"})
+
+
 @app.route('/api/functions')
 def get_functions():
     funcs_1d = {k: {"name": v["name"], "domain": v["domain"]} for k, v in FUNCTIONS_1D.items()}
